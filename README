@@ -1,7 +1,7 @@
-##PDO Function for PHP##
+##PDO Function for PHP
 This function allows users in PHP to interface with mySQL databases using the PDO library which has the benefit of allowing prepared statements to avoid the potential exploit of a sql injection attack. This is particularly useful when running frontend web applications. 
 
-###Sample Use###
+###Sample Use
 Select statememnt returned in an associative array. One value is then echoed. 
 ```
 $return = sqlQuery($connection, "SELECT * FROM my_users;");
@@ -19,7 +19,7 @@ Insert statement does not return any useful data, it is just executed. In this e
 sqlQuery($connection, "INSERT INTO prepared (name,age) VALUES (?,?)", array("Jane", 18));
 ```
 
-###Installation###
+###Installation
 1. Download sqlQuery.php and place it in your project directory.
 2. Require the file in your project.
 ```
@@ -27,13 +27,13 @@ require_once("sqlQuery.php");
 ```
 3. Use as directed above.
 
-###Author###
+###Author
 Nicholas Elder 
 
-###Contact###
+###Contact
 baffu (at) stormcraft (dot) ca
 
-###Licence###
+###Licence
 The MIT License (MIT)
 
 Copyright (c) 2015 Nicholas Elder
