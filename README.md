@@ -3,26 +3,26 @@ This function allows users in PHP to interface with mySQL databases using the PD
 
 ###Sample Use
 Select statememnt returned in an associative array. One value is then echoed. 
-```
+```php
 $return = sqlQuery($connection, "SELECT * FROM my_users;");
 echo $return[0]['username']
 ```
 Select statement returns an associative array with one argument. All results are then printed out.
-```
+```php
 $returntwo = sqlQuery($connection, "SELECT * FROM prepared WHERE name = ?;", array("nick"));
 foreach ($returntwo as $key => $value) {
 	echo $value['age']."<br />";
 }
 ```
 Insert statement does not return any useful data, it is just executed. In this example there are multiple arguments.
-```
+```php
 sqlQuery($connection, "INSERT INTO prepared (name,age) VALUES (?,?)", array("Jane", 18));
 ```
 
 ###Installation
 1. Download sqlQuery.php and place it in your project directory.
 2. Require the file in your project.
-```
+```php
 require_once("sqlQuery.php");
 ```
 3. Use as directed above.
