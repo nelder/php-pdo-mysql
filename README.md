@@ -2,7 +2,7 @@
 This function allows users in PHP to interface with mySQL databases using the PDO library which has the benefit of allowing prepared statements to avoid the potential exploit of a sql injection attack. This is particularly useful when running frontend web applications. 
 
 ###Sample Use
-Select statememnt returned in an associative array. One value is then echoed. 
+Select statement returned in an associative array. One value is then echoed. 
 ```php
 $return = sqlQuery($connection, "SELECT * FROM my_users;");
 echo $return[0]['username']
@@ -20,12 +20,13 @@ sqlQuery($connection, "INSERT INTO prepared (name,age) VALUES (?,?)", array("Jan
 ```
 
 ###Installation
-1. Download sqlQuery.php and place it in your project directory.
-2. Require the file in your project.
+1) Download sqlQuery.php and place it in your project directory.
+
+2) Require the file in your project.
 ```php
 require_once("sqlQuery.php");
 ```
-3. Use as directed above.
+3) Use as directed above.
 
 ###Author
 Nicholas Elder 
