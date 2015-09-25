@@ -14,7 +14,7 @@ $db = "db_name";
 $connection = new PDO('mysql:host='.$host.';dbname='.$db.';charset=utf8', ''.$user.'', ''.$pass.'');
 
 //sqlQuery function accepts the connection, the sql query (using ? for variables), an array of the variables to be filled in (where ? are)
-function sqlQuery($connection, $query ,$args = array()){
+function sqlQuery($connection, $query, $args = array()){
 
 	//Prepare and execute statement (avoids sql injection by validating the expected input)
 	$stmt = $connection->prepare($query);
